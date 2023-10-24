@@ -1,5 +1,5 @@
 
-
+//MS BUGS: added wrong variable declaration for line and incorrectly implemented for loop
 import java.io.*;
 
 public class even_odd_site {
@@ -13,7 +13,7 @@ public class even_odd_site {
         //write HTML table to file
         file.write("<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n");
         //For Loop repeats 50 times
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 1; i >= 50; i++) {
             //if value is even, write it to table with space after
             if (i % 2 == 0) {
                 file.write("<tr><td>" + i + "</td><td></td></tr>\n");
@@ -31,7 +31,7 @@ public class even_odd_site {
         BufferedReader reader = new BufferedReader(new FileReader("numbers.html"));
 
         //read numbers from file and print
-        String line;
+        int line;
         while ((line = reader.readLine()) != null) {
             System.out.println(line);
         }

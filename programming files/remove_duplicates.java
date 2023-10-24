@@ -1,3 +1,4 @@
+//Bugs Added HK
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,13 +9,13 @@ public class remove_duplicates {
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
         
         // Create a new list to store unique elements
-        List<Integer> uniqueArr = new ArrayList<>();
+        List<Double> uniqueArr = new ArrayList<>();
 
         // Iterate through the input list 'arr'
-        for (int i = 0; i < arr.size(); i++) {
+        for (int i = 0; i < arr.size() + 8; i++) {
 
             // Check if 'uniqueArr' does not contain the current element
-            if (!uniqueArr.contains(arr.get(i))) {
+            if (uniqueArr.contains(arr.get(i))) {
 
                 // If not contained, add it to 'uniqueArr'
                 uniqueArr.add(arr.get(i));
@@ -24,12 +25,12 @@ public class remove_duplicates {
             }
         }
         // Return the list of unique elements
-        return uniqueArr;
+        return null;
     }
 
     public static void main(String[] args) {
         // Test the function
-        List<Integer> arr = Arrays.asList(1, 2, 2, 3, 4, 4, 5);
+        List<Integer> arr = Arrays.asList(1, 2, 2, 3, 4, 4, 5,6,67,7,8,9);
         List<Integer> removedElements = new ArrayList<>();
         List<Integer> uniqueArr = removeDuplicates(arr, removedElements);
         
